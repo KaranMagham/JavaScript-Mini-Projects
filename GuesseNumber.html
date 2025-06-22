@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessse Number</title>
+</head>
+
+<body>
+    <script>
+        let num = Math.floor(Math.random() * 100); 
+        let attempts = 0;
+        let guess;
+
+        do {
+            let input = prompt("Enter a number between 0 and 99:");
+            guess = parseInt(input); 
+            attempts++;
+
+            if (isNaN(guess)) {
+                alert("Please enter a valid number!");
+                continue;
+            }
+
+            if (guess < num) {
+                console.log("Try a bigger number...");
+                alert("Try a bigger number...");
+            } else if (guess > num) {
+                console.log("Try a smaller number...");
+                alert("Try a smaller number...");
+            }
+        } while (guess !== num);
+
+        alert(`Congrats, you guessed correctly! The number was ${num}. It took you ${attempts} attempts.`);
+        console.log(`Congrats, you guessed correctly! The number was ${num}. It took you ${attempts} attempts.`);
+    </script>
+</body>
+</html>
