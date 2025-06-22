@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+  <script>
+    const choices = ["R", "P", "S"];
+    const fullForm = { R: "Rock", P: "Paper", S: "Scissors" };
+
+    let player = prompt("Enter your choice [R, P, S]:").toUpperCase();
+
+    while (!choices.includes(player)) {
+      player = prompt("❌ Invalid input. Please enter R, P, or S only:").toUpperCase();
+    }
+
+    const computer = choices[Math.floor(Math.random() * 3)];
+
+    alert(`Your choice: ${fullForm[player]}\nComputer's choice: ${fullForm[computer]}`);
+
+    if (player === computer) {
+      alert("🤝 It's a draw!");
+    } else if (
+      (player === "R" && computer === "S") ||
+      (player === "P" && computer === "R") ||
+      (player === "S" && computer === "P")
+    ) {
+      alert("🎉 You Win!");
+    } else {
+      alert("😢 You Lose. Try again!");
+    }
+  </script>
+</body>
+</html>
