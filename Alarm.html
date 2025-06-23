@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALAM Clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(157, 153, 153);
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .contain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            height: 60vh;
+            /* Adjusted to include current-time space */
+            width: 35vw;
+            /* Slightly wider for better spacing */
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: rgb(54, 52, 52);
+        }
+
+        #current-time {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: rgb(75, 73, 73);
+            /* Slightly darker to distinguish from input label */
+        }
+
+        .alarm {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 1rem;
+            color: rgb(54, 52, 52);
+            margin-right: 10px;
+        }
+
+        input[type="time"] {
+            padding: 8px 10px;
+            font-size: 1rem;
+            border: 1px solid rgb(200, 200, 200);
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="time"]:focus {
+            outline: none;
+            border: 1px solid rgb(54, 52, 52);
+            box-shadow: 0px 0px 5px rgba(54, 52, 52, 0.5);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            /* Space between buttons */
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: rgb(54, 52, 52);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: rgb(75, 73, 73);
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .alarm-active {
+            color: red;
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contain">
+        <h1>Set Your time.</h1>
+
+        <div id="current-time">Loading...</div>
+        <div class="alarm">
+            <label for="set-time">Set-Time:</label>
+            <input type="time" name="set-time" id="alarm-time">
+        </div>
+        <div class="btn-container">
+            <button class="btn" id="set-alarm" type="submit">Set-Alarm</button>
+            <button class="btn" id="stop-alarm" type="submit">Stop-Alarm</button>
+        </div>
+    </div>
+    <script src="Alarm.js"></script>
+</body>
+
+</html>
