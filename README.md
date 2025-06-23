@@ -1,4 +1,4 @@
-# 🧠 JavaScript Mini Projects
+# 🚀🧠 JavaScript Mini Projects
 
 Welcome to my collection of fun and beginner-friendly **JavaScript Mini Projects!** 🚀  
 These projects are perfect for mastering core JavaScript concepts through practical and interactive applications. Each project is simple yet effective in teaching logic building, DOM manipulation, event handling, and more.
@@ -7,11 +7,15 @@ These projects are perfect for mastering core JavaScript concepts through practi
 
 ## 🔧 Projects Included:
 
-1. 🎯 **Guess the Number** – Can you guess the random number in the fewest tries?
-2. ✊✋✌️ **Rock Paper Scissors** – Challenge the computer and test your luck!
-3. 😂 **Tell Me a Joke** – Get a random joke with one click. Fun meets code!
-4. ⏰ **Digital Clock** – A live clock made using pure JavaScript.
-5. 📅 **Date & Time Display** – View current time and date in a stylish way.
+🎯 Guess the Number – Can you guess the random number in the fewest tries? A fun way to build logic and handle user input.
+✊✋✌️ Rock Paper Scissors – Challenge the computer and test your luck! Practice conditionals and randomization.
+😂 Tell Me a Joke – Get a random joke from an array or API with a click. Great for practicing DOM manipulation.
+⏰ Digital Clock – A live, real-time digital clock using setInterval() and Date object.
+📅 Date & Time Display – A neat display of current date and time formatted for readability.
+💻 Hacker Terminal Simulator – Simulate a fake hacker terminal that auto-types text with a matrix-style effect.
+✅ To-Do List App – Add, delete, and mark tasks as done. A beginner-friendly project for mastering list operations and local storage.
+🔐 Password Generator – Generate strong passwords with custom length, symbols, numbers, and letters.
+⏰ Alarm Clock – Set an alarm for a future time using JavaScript timers and alerts.
 
 > 🔁 **More projects coming soon...**
 
