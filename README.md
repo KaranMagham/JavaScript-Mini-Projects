@@ -7,15 +7,14 @@ These projects are perfect for mastering core JavaScript concepts through practi
 
 ## 🔧 Projects Included:
 
-🎯 Guess the Number – Can you guess the random number in the fewest tries? A fun way to build logic and handle user input.
-✊✋✌️ Rock Paper Scissors – Challenge the computer and test your luck! Practice conditionals and randomization.
-😂 Tell Me a Joke – Get a random joke from an array or API with a click. Great for practicing DOM manipulation.
-⏰ Digital Clock – A live, real-time digital clock using setInterval() and Date object.
-📅 Date & Time Display – A neat display of current date and time formatted for readability.
-💻 Hacker Terminal Simulator – Simulate a fake hacker terminal that auto-types text with a matrix-style effect.
-✅ To-Do List App – Add, delete, and mark tasks as done. A beginner-friendly project for mastering list operations and local storage.
-🔐 Password Generator – Generate strong passwords with custom length, symbols, numbers, and letters.
-⏰ Alarm Clock – Set an alarm for a future time using JavaScript timers and alerts.
+1.🎯 Guess the Number – Can you guess the random number in the fewest tries? A fun way to build logic and handle user input.
+2.✊✋✌️ Rock Paper Scissors – Challenge the computer and test your luck! Practice conditionals and randomization.
+3.😂 Tell Me a Joke – Get a random joke from an array or API with a click. Great for practicing DOM manipulation.
+4.⏰ Digital Clock – A live, real-time digital clock using setInterval() and Date object.
+5.💻 Hacker Terminal Simulator – Simulate a fake hacker terminal that auto-types text with a matrix-style effect.
+6.✅ To-Do List App – Add, delete, and mark tasks as done. A beginner-friendly project for mastering list operations and local storage.
+7.🔐 Password Generator – Generate strong passwords with custom length, symbols, numbers, and letters.
+8.⏰ Alarm Clock – Set an alarm for a future time using JavaScript timers and alerts.
 
 > 🔁 **More projects coming soon...**
 
