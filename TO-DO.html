@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO List Creator.</title>
+    <style>
+        /* Resetting Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f0f4c3, #c8e6c9);
+            color: #333;
+            padding: 20px;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+
+        /* Styling the Container */
+        .contain {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        input[type="text"],
+        input[type="datetime-local"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1b5e20;
+        }
+
+        /* Task List Section */
+        #task-list {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        #task-list>div {
+            background-color: #f1f8e9;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #c5e1a5;
+        }
+
+        #task-list>div span {
+            font-weight: bold;
+            color: #388e3c;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>TO-DO List.</h1>
+    <div class="contain">
+        <h2>Please Enter Your Information</h2>
+        <form action="" method="post">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required><br><br>
+            <label for="date">Date:</label>
+            <input type="datetime-local" id="date" required><br><br>
+            <label for="task">TO-DO:</label>
+            <textarea id="task" rows="4" cols="50" required></textarea><br><br>
+            <button type="submit"> SAVE </button>
+        </form>
+    </div>
+    <div id="task-list">
+    </div>
+    <script>
+    function renderTasks() {
+        const container = document.getElementById("task-list");
+        container.innerHTML = ""; // clear previous
+
+        const tasks = JSON.parse(localStorage.getItem("todos")) || [];
+
+        tasks.forEach((item, index) => {
+            const taskDiv = document.createElement("div");
+            taskDiv.innerHTML = `
+                <div>
+                    <span><strong>${item.name}</strong> | ${item.date}</span><br>
+                    <p>${item.task}</p>
+                    <button onclick="deleteTask(${index})">❌ Delete</button>
+                </div>
+            `;
+            container.appendChild(taskDiv);
+        });
+    }
+
+    function deleteTask(index) {
+        const tasks = JSON.parse(localStorage.getItem("todos")) || [];
+        tasks.splice(index, 1);
+        localStorage.setItem("todos", JSON.stringify(tasks));
+        renderTasks();
+    }
+
+    document.querySelector('form').addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const date = document.getElementById('date').value;
+        const task = document.getElementById('task').value;
+
+        const newTask = { name, date, task };
+        const tasks = JSON.parse(localStorage.getItem("todos")) || [];
+
+        tasks.push(newTask);
+        localStorage.setItem("todos", JSON.stringify(tasks));
+
+        renderTasks();
+        document.querySelector('form').reset();
+    });
+
+    // Load tasks on page load
+    window.onload = renderTasks;
+</script>
+
+
+</body>
+
+</html>
