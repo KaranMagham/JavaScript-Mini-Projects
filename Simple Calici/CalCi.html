@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        }
+
+        .container {
+            background: linear-gradient(135deg, #00ff7f, #00c853);
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 255, 128, 0.3);
+            width: 350px;
+            text-align: center;
+        }
+
+        .container label {
+            display: block;
+            margin: 10px 0 5px;
+            color: rgb(67, 97, 67);
+            font-weight: 600;
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #0f0;
+            border-radius: 5px;
+            outline-color: #0f0;
+            background-color: #1b1b1b;
+            color: #00ff7f;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .container input:focus {
+            box-shadow: 0 0 10px #00ff7f;
+            border-color: #00ff7f;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .button-group button {
+            width: 70px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #00c853, #00e676);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 8px rgba(0, 255, 128, 0.5);
+            font-size: 1.2rem;
+        }
+
+        .button-group button:hover {
+            background: #00ff7f;
+            box-shadow: 0 0 12px #00ff7f;
+            color: #1b1b1b;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #1b1b1b;
+            border-left: 5px solid #00ff7f;
+            color: #00ff7f;
+            font-weight: 600;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label>Enter your first number:</label>
+        <input type="number" id="num1">
+        <label>Enter your second number:</label>
+        <input type="number" id="num2">
+
+        <div class="button-group">
+            <button class="add" onclick="addition()">+</button>
+            <button class="sub" onclick="subtraction()">-</button>
+            <button class="mul" onclick="multiplication()">*</button>
+            <button class="divide" onclick="division()">/</button>
+        </div>
+
+        <p id="result">Result will appear here</p>
+    </div>
+
+    <script src="calci.js"></script>
+</body>
+
+</html>
