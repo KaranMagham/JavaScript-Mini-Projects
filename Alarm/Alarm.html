@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>ALAM Clock</title>
+
+</head>
+
+<body class="h-screen flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-400 font-sans">
+    <div
+        class="bg-white rounded-2xl shadow-xl p-8 w-[90vw] sm:w-[35vw] flex flex-col justify-center items-center space-y-6">
+        <h1 class="text-2xl font-semibold text-gray-800">Set Your Time</h1>
+
+        <div id="current-time" class="text-lg text-gray-600 font-mono tracking-wide">Loading...</div>
+
+        <div class="text-center">
+            <label for="set-time" class="text-base text-gray-700 mr-2">Set-Time:</label>
+            <input type="time" id="alarm-time"
+                class="p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 transition">
+        </div>
+
+        <div class="flex justify-center gap-4">
+            <button id="set-alarm"
+                class="bg-gray-800 text-white rounded-full px-6 py-2 hover:bg-gray-900 shadow-md hover:shadow-lg hover:scale-105 transition duration-300 font-medium">
+                Set Alarm
+            </button>
+            <button id="stop-alarm"
+                class="bg-gray-800 text-white rounded-full px-6 py-2 hover:bg-gray-900 shadow-md hover:shadow-lg hover:scale-105 transition duration-300 font-medium">
+                Stop Alarm
+            </button>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+
+</html>
