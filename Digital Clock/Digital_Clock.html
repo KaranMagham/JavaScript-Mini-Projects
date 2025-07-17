@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #000000, #434343);
+            color: red;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .contain {
+            font-size: 80px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            padding: 40px;
+            border: 8px solid #d90429;
+            border-radius: 20px;
+            background-color: linear-gradient(45deg, #2b2d42, #8d99ae);
+            color: #f1faee;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .contain {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contain {
+                font-size: 60px;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain" id="Digital"></div>
+    <script src="DC.js"></script>
+</body>
+
+</html>
