@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch.Jokes.</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #4169e1, #1e3c72, #2a5298);
+            color: #fff;
+        }
+
+        #contain {
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(45deg, #5a8fcb, #4179b7, #2f5e91);
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            max-width: 600px;
+            width: 80%;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        #contain::before,
+        #contain::after {
+            content: "💬 ";
+            font-size: 2rem;
+            position: absolute;
+            top: -25px;
+            left: 20px;
+        }
+
+        #contain::after {
+            content: " 💬";
+            position: absolute;
+            bottom: -25px;
+            right: 20px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #contain:hover {
+            transform: scale(1.05);
+        }
+
+        button {
+            background-color: #4169e1;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #1e3c72;
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+            #contain {
+                font-size: 1.2rem;
+                width: 90%;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 10px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contain">
+
+    </div>
+    <script>
+        const jk = [
+            "What do kids play when their mom is using the phone? Bored games.",
+            "What do you call an ant who fights crime? A vigilANTe!",
+            "What's the smartest insect? A spelling bee!",
+            "What does a storm cloud wear under his raincoat? Thunderwear.",
+            "What is fast, loud and crunchy? A rocket chip.",
+            "How does the ocean say hi? It waves!",
+            "Why did the teddy bear say no to dessert? Because she was stuffed.",
+            "Name the kind of tree you can hold in your hand? A palm tree!",
+            "What do birds give out on Halloween? Tweets.",
+            "What has ears but cannot hear? A cornfield.",
+            "What's a cat's favorite dessert? A bowl full of mice-cream.",
+            "Where did the music teacher leave her keys? In the piano!",
+            "What do you call a guy who's really loud? Mike.",
+            "Why do birds fly south in the winter? It's faster than walking!",
+            "What did the lava say to his girlfriend? 'I lava you!'",
+            "What did Yoda say when he saw himself in 4k? HDMI.",
+            "Which superhero hits home runs? Batman!",
+            "What's Thanos' favorite app on his phone? Snapchat.",
+            "What is a room with no walls? A mushroom.",
+            "What social events do spiders love to attend? Webbings.",
+            "What did one pickle say to the other? Dill with it."
+        ]
+
+       let ran=jk[Math.floor(Math.random()*jk.length)];
+       console.log(ran)
+       let jokesPusher=document.getElementById('contain');
+       jokesPusher.innerHTML=ran
+    </script>
+</body>
+
+</html>
