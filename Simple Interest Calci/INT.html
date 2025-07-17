@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline-color: #764ba2;
+        }
+
+        .container input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+        }
+
+        .container button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .container button:hover {
+            background: linear-gradient(135deg, #5a67d8, #6b46c1);
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #f3f3f3;
+            border-left: 5px solid #667eea;
+            color: #333;
+            font-weight: 500;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label for="">Enter your Principal amount: </label>
+        <input type="number" name="" id="principalVal">
+        <label for="">Enter your Rate of Interest: </label>
+        <input type="number" name="" id="rateVal">
+        <label for="">Enter your Time Period: </label>
+        <input type="number" name="" id="timeVal">
+        <button onclick="showInterest()">Calculate your interest...</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="Interest.js"></script>
+</body>
+
+</html>
