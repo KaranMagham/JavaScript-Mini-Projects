@@ -1,0 +1,49 @@
+
+body {
+    background-color: #18191f;  
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#apple,
+#twitter,
+#github,
+#facebook {
+    font-size: 2.5em; 
+    background-color: #18191f;
+    color: #fff;
+    box-shadow: 
+        2px 2px 8px rgba(0, 0, 0, 0.7), 
+        0 0 20px rgba(0, 114, 255, 1),
+        0 0 40px rgba(0, 114, 255, 0.7), 
+        0 0 60px rgba(0, 114, 255, 0.5), 
+        0 0 80px rgba(0, 114, 255, 0.3);
+    border-radius: 29px;
+    padding: 15px 25px;
+    margin: 0 40px;
+    text-align: center; 
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff; 
+}
+
+
+#twitter {
+    animation-delay: 0.3s;
+}
+
+#facebook {
+    animation-delay: 0.7s;
+}
+
+#github {
+    animation-delay: 0.1s;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
