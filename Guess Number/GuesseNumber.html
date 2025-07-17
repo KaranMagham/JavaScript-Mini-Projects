@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #7b0daa, #1d002b);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            background-color: rgb(207, 150, 242);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 320px;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            color: #2d0036;
+            font-weight: 600;
+        }
+
+        .container input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            outline: none;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .container input[type="number"]:focus {
+            border-color: #2d0036;
+            box-shadow: 0 0 10px rgba(125, 0, 150, 0.4);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #2d0036;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #47004f;
+            transform: scale(1.05);
+        }
+
+        #message{
+            font: bold;
+            color: rgb(50, 7, 80);
+            font-size:large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label for="num">Enter a number between 0 and 100:</label>
+        <input type="number" name="num" id="userguess" required placeholder="0-100">
+        <button class="btn" onclick="guess()">Check</button>
+        <p id="message"></p>
+    </div>
+    <script src="numbers.js"></script>
+</body>
+
+</html>
