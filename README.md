@@ -31,6 +31,7 @@ This repository contains a wide range of small beginner to intermediate level pr
 ✅ Git & GitHub
 
 # 🎯 Purpose Of This Repository
+
 ## This repository is a reflection of my learning journey in the field of web development.
 
 ## It includes projects that focus on:
