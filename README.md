@@ -13,7 +13,6 @@ This repository contains a wide range of small beginner to intermediate level pr
 🔹 Neon Effects
 🔹 Clutter Files Organizer
 🔹 And many more coming soon...
-
 🛠 Tech Stack Used
 ✅ HTML5 / CSS3
 
